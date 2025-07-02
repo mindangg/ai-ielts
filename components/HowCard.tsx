@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const HowCard = ({ tag, details, image} : HowCardProps) => {
     return (
-        <div className='flex flex-col justify-center items-center text-center gap-4 shadow-xl rounded-lg p-4'>
-            <div className=''>
+        <div className='max-md:w-full flex flex-col justify-center items-center text-center gap-4 shadow-xl rounded-lg p-4'>
+            <div>
                 <Image 
                     src={image}
                     alt={tag}
@@ -12,8 +12,8 @@ const HowCard = ({ tag, details, image} : HowCardProps) => {
                     height={40}
                 />
             </div>
-            <p className='text-2xl font-medium'>{tag}</p>
-            <p className='text-md'>{details}</p>
+            <p className='text-2xl max-md:text-xl font-medium'>{tag}</p>
+            <p className='text-md max-sm:text-sm'>{details}</p>
         </div>
     )
 }
