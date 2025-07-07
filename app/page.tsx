@@ -1,4 +1,5 @@
 import HowCard from '@/components/HowCard'
+import Link from 'next/link';
 
 const howItems = [
   {
@@ -24,7 +25,12 @@ export default function Home() {
       <section className='flex flex-col gap-6 justify-center items-center text-center bg-sky-200 py-10 px-9 rounded-xl shadow-xl'>
         <h1 className='text-3xl font-bold'>Your Very Own IELTS Speaking Assistant</h1>
         <p className='text-lg'>Get real speaking practice and smart feedback — talk your way to Band 9 with ease.</p>
-        <button className='px-4 py-2 bg-sky-400 hover:bg-sky-300 rounded-md cursor-pointer shadow-md'>Get Started</button>
+        <Link 
+          href='/assistants/new' 
+          className='px-4 py-2 bg-sky-400 hover:bg-sky-300 rounded-md cursor-pointer shadow-md'
+        >
+          Build Your Assistant
+        </Link>
       </section>
 
       <section className='flex flex-col gap-7'>

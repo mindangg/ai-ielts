@@ -1,7 +1,14 @@
 import AssistantComponent from '@/components/AssistantComponent'
+import { currentUser } from '@clerk/nextjs/server'
 import Image from 'next/image'
+import { redirect } from 'next/navigation'
 
-const Assistant = () => {
+const Assistants = async () => {
+    const user = await currentUser()
+    
+    if (!user)
+        redirect('/sign-in')
+
     return (
         <main>
             <article className='flex border border-black rounded-4xl justify-between p-6 max:md-flex-col'>
@@ -23,9 +30,12 @@ const Assistant = () => {
                     15 minutes
                 </div>
             </article>
-            <AssistantComponent />
+            <AssistantComponent 
+                userName={user.firstName!}
+                userImage={user.imageUrl!}
+            />
         </main>
     )
 }
 
-export default Assistant
+export default Assistants

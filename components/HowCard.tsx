@@ -12,8 +12,8 @@ const HowCard = ({ tag, details, image} : HowCardProps) => {
                     height={40}
                 />
             </div>
-            <p className='text-2xl max-md:text-xl font-medium'>{tag}</p>
-            <p className='text-md max-sm:text-sm'>{details}</p>
+            <p className='text-2xl font-medium'>{tag}</p>
+            <p className='text-md'>{details}</p>
         </div>
     )
 }

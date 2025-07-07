@@ -8,7 +8,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 const navItems = [
     { label: 'Home', href: '/'},
-    { label: 'Assistant', href: '/assistant'},
+    { label: 'Assistant', href: '/assistants'},
     { label: 'My Journey', href: '/my-journey'},
 ]
 
